@@ -126,6 +126,22 @@ def arrSum(arr):
     return num + arrSum(arr)
 
 
+# 斐波那契数
+# 输入数字n
+def fibseq(n):
+    if n == 0:
+        return 0
+    if n < 3:
+        return 1
+
+    front = 1
+    behind = 1
+    fibN = 0
+    for i in range(3, n+1):
+        fibN = front + behind
+        front = behind
+        behind = fibN
+    return fibN
 
 
 
